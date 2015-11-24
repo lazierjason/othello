@@ -1,0 +1,150 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+body, input, textarera, button, select {
+  font-family: "Helvetica Neue", Helvetica, "MS PGothic", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+}
+ul, li {list-style: none;}
+button, a {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+/* Customized Style */
+
+body {
+  background: #eaf5f0;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  color: #000005;
+  padding: 20px;
+}
+  .title span {
+    font-size: 10px;
+    color: #99999d;
+  }
+
+#prepare-game {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+  #prepare-game .curtain {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #d5d5da;
+    opacity: 0.5;
+  }
+  #prepare-game .popup {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    padding: 8px 23px;
+    width: 190px;
+    height: 180px;
+    margin: -100px 0px 0px -120px;
+    background-color: #f5f5fa;
+    border: solid 2px #a5a5aa;
+    border-radius: 4px;
+  }
+    #prepare-game .popup .instruction {
+      font-size: 50px;
+      text-align: center;
+      font-weight: bold;
+      color: #55555a;
+      line-height: 70px;
+      padding-bottom: 10px;
+    }
+    #prepare-game .popup .button-black,
+    #prepare-game .popup .button-white {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      font-size: 20px;
+      line-height: 80px;
+      border: solid 1px #000;
+      font-weight: bold;
+      color: #a9a9af;
+      text-align: center;
+    }
+    #prepare-game .popup .button-black {
+      float: left;
+      background-color: #000;
+      color: #aaa;
+    }
+    #prepare-game .popup .button-white {
+      float: right;
+      background-color: #fff;
+    }
+#board {
+  width: 320px;
+  height: 320px;
+  border: solid 1px #777;
+  margin: auto;
+}
+  #board .tile {
+    width: 34px;
+    height: 34px;
+    padding: 2px;
+    border: solid 1px #777;
+    background-color: #f5f5fa;
+    float: left;
+  }
+    #board .tile .stone {
+      display: none;
+      width: 32px;
+      height: 32px;
+      border: solid 1px #333;
+      border-radius: 50%;
+    }
+    #board .tile.highlight {
+      background-color: #fdf;
+    }
+    #board .tile.hint {
+      background-color: #f5f5df;
+    }
+    #board .tile.black .stone {
+      display: block;
+      background-color: #000;
+    }
+    #board .tile.white .stone {
+      display: block;
+      background-color: #fff;
+    }
+#message {
+  width: 320px;
+  padding: 10px 0px;
+  margin: auto;
+  font-size: 30px;
+  color: #3d5;
+  text-align: center;
+}
+#info {
+  width: 320px;
+  padding: 10px 0px;
+  margin: auto;
+  font-size: 15px;
+  color: #293;
+  text-align: center;
+}
+
